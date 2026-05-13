@@ -1,0 +1,341 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Sancreek", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+body,html{
+    overflow: hidden;
+}
+
+.bg-inicio{
+    background: url(img/main.png);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.btn-inicio{
+    width: 200px;
+    height: 60px;
+    border-radius: 8px;
+    border: none;
+    font-size: 40px;
+    background: #f1ac39;
+    color: #864916;
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 100px);
+}
+
+.btn-inicio:active{
+    box-shadow: 0px 4px 0px 4px #864916, 0px 10px 50px 50px rgba(0, 0, 0, 0.5);
+    background: #f1ac39;
+    bottom: 24px;
+}
+
+.bg-transicion{
+background: rgba(0, 0, 0, .0);
+position: absolute;
+top: 0px; left: 0px; width: 100%; height: 100%;
+transition: .6s all;
+}
+
+.bg-transicion-show{
+background: rgba(0, 0, 0, 1);
+transition: .6s all;
+z-index: 99999;
+}
+.bg-personaje{
+    background: url(img/bg_personaje.png);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.titulo{
+    float: left;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    color: #f1ac39;
+    font-size: 1.3em;
+    text-shadow: 2px 3px 0px rgba(0, 0, 0, 0.5);
+}
+.personajes{
+    float: left;
+    width: 100%;
+    height: calc(100% - 160px);
+}
+    .anterior{
+        margin-left:10%;
+        width: 100px;
+        height: 100%;
+        float: left;
+        background: none;
+        outline: none;
+        border: none;
+    }
+        .anterior img{
+            width: 100%;
+        }
+    .personaje{
+        float: left;
+        width: calc(80% - 200px);
+        height: 100%;
+        text-align: center;
+        animation: p1 2s ease-in-out infinite;
+    }
+    .personaje img{
+        height: 100%;
+    }
+    @keyframes p1{
+        0% {transform: scaleY(1);}
+        50% {transform: scaleY(1.05) translateY(-5px);}
+        100%{transform: scaleY(1);}
+    }
+
+    @keyframes p2{
+        0% {transform: scaleY(1) rotate(180deg);}
+        50% {transform: scaleY(1.05) rotate(180deg) translateY(-5px);}
+        100%{transform: scaleY(1) rotate(180deg);}
+    }
+    .siguiente{
+        width: 100px;
+        height: 100%;
+        float: left;
+        background: none;
+        outline: none;
+        border: none;
+    }
+        .siguiente img{
+            width: 100%;
+        }
+.barra{
+    float: left;
+    width: 100%;
+    height: 80px;
+}
+    .txt-nombre{
+        width: 300px;
+        height: 60px;
+        border-radius: 8px;
+        border: none;
+        font-size: 25px;
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        padding-left: 10px;
+        box-sizing: border-box;
+        float: left;
+        text-align: center;
+        outline: none;
+        margin-left: calc(50% - 235px);
+    }
+    .btn-siguiente{
+        width: 150px;
+        height: 60px;
+        border-radius: 8px;
+        box-shadow: 0px 2px 0px 2px #864916;
+        border: none;
+        font-size: 25px;
+        background: #f1ac39;
+        color: #864916;
+        position: relative;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.7);
+        margin-left: 20px;
+        float: left;
+    }
+
+.bg-juego{
+    background: url(img/bg2.png);
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.left{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+    width: 50%;
+    height: 100%;
+}
+    .p1{
+        position: absolute;
+        left: 30px;
+        bottom: 30px;
+        transition: .5s all;
+    }
+    .p1 .bg-personaje-img{
+        display: block;
+        width: 250px;
+        height: 300px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+        animation: personajeBounce 2s ease-in-out infinite;
+    }
+    @keyframes personajeBounce{
+        0%   { transform: scaleY(1) translateY(0px); }
+        50%  { transform: scaleY(1.05) translateY(-6px); }
+        100% { transform: scaleY(1) translateY(0px); }
+    }
+    @keyframes personajeBounceFlip{
+        0%   { transform: scaleX(-1) scaleY(1) translateY(0px); }
+        50%  { transform: scaleX(-1) scaleY(1.05) translateY(-6px); }
+        100% { transform: scaleX(-1) scaleY(1) translateY(0px); }
+    }
+    .p1 h2{
+        color:#f1ac39;
+        font-size: 1.4em;
+        text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.8);
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    .p2 h2{
+        color:#f1ac39;
+        font-size: 1.4em;
+        text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.8);
+        text-align: left;
+        margin-bottom: 8px;
+    }
+    .p1 img.personaje-juego,
+    .p2 img.personaje-juego{
+        height: 250px;
+        display: block;
+        margin-top: 10px;
+    }
+    .vidas1 img,
+    .vidas2 img{
+        height: 35px;
+        width: 35px;
+        display: inline-block;
+        margin-top: 5px;
+    }
+
+.right{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    width: 50%;
+    height: 100%;
+}
+    .p2{
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        transition: .5s all;
+        text-align: right;
+    }
+    .p2 h2{
+        text-align: right;
+    }
+    .p2 .bg-personaje-img{
+        display: block;
+        width: 250px;
+        height: 300px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        transform: scaleX(-1);
+        animation: personajeBounceFlip 2s ease-in-out infinite;
+    }
+.conteo{
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0px;
+
+}
+    .msj, .no1, .no2, .no3{
+        width: 100%;
+        position: absolute;
+        height: 200px;
+        top: calc(50% - 100px);
+        text-align: center;
+        font-size: 4em;
+        line-height: 200px;
+        opacity: 0;
+        transition: .3s all;
+        color: #f1ac39;
+        text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.5);
+    }
+    .no1 img, .no2 img, .no3 img{
+        height: 100%;
+    }
+
+.bounceFromTop { animation-name: bounceFromTop }
+@keyframes bounceFromTop {
+    0%, 25%, 55%, 85%, 100% {
+        animation-timing-function: ease-out;
+        transform: translate3d(0, 0, 0);
+    }
+    41%, 44% {
+        animation-timing-function: ease-in;
+        transform: translate3d(0, -20px, 0) scale3d(1, 1.1, 1);
+    }
+    70% {
+        animation-timing-function: ease-in;
+        transform: translate3d(0, -20px, 0);
+    }
+    90% { transform: translate3d(0, -4px, 0) }
+}
+
+.ganador{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+}
+    .personajeGanador{
+        text-align: center;
+        height: 100%;
+    }
+    .personajeGanador img{
+        height: 100%;
+        margin-top: -80px;
+        animation-name: bounceFromTop;
+        animation-iteration-count: infinite;
+        animation-duration: 1s;
+    }
+    .ganador h1{
+        color: #f1ac39;
+        font-size: 4em;
+        text-shadow: 0px 3px 0px rgba(0, 0, 0, 0.5);
+    }
+    .restart{
+        width: 400px;
+        height: 60px;
+        border-radius: 8px;
+        box-shadow: 0px 10px 0px 4px #864916, 0px 10px 50px 50px rgba(0, 0, 0, 0.5);
+        border: none;
+        font-size: 40px;
+        background: #f1ac39;
+        color: #864916;
+        position: absolute;
+        bottom: 30px;
+        left: calc(50% - 200px);
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.7);
+        transition: .1s all;
+    }
+    .restart:active{
+        box-shadow: 0px 4px 0px 4px #864916, 0px 10px 50px 50px rgba(0, 0, 0, 0.5);
+        background: #f1ac39;
+        bottom: 24px;
+    }

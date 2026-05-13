@@ -1,0 +1,23 @@
+{
+    "name": "Bang Bang",
+    "short_name": "Bang Bang",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#ff88ff",
+    "lang": "es",
+    "scope": "/",
+    "description": "Un juego de disparos para dos jugadores",
+    "theme_color": "#40C090",
+    "icons": [
+        {
+            "src": "img/pwa-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "img/pwa-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
